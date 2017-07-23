@@ -23,6 +23,8 @@ class Utilities
 #define CHARCTERS "abcdefghijklmnopqrstuvwxyz"
 #define NUMBERS "1234567890"
 public:
+	// return code 1: incorrect character encoutered
+	int ERRNOUTILITIES;
 	UTILITIES_LIBRARY_API void Erase(std::string &str, char *cntrl_char);
 	UTILITIES_LIBRARY_API std::ifstream OpenFileStream(std::string filename);
 	UTILITIES_LIBRARY_API std::string OpenAndReadFileAndClose(std::string filename);
@@ -32,6 +34,8 @@ public:
 	UTILITIES_LIBRARY_API void GetSyntacticalPos(std::string data,char control, int *pos);
 	UTILITIES_LIBRARY_API bool is_number(const std::string & s);
 	UTILITIES_LIBRARY_API char GetFirstNonWhiteSpaceChar(std::string JSON);
-	UTILITIES_LIBRARY_API std::vector<std::string> Vectorize(std::string buff, char * control);
 	UTILITIES_LIBRARY_API bool ContainsOnlyWhitespace(std::string JSON);
+	UTILITIES_LIBRARY_API float getNumber(std::string buff);
+	UTILITIES_LIBRARY_API bool is_bool(std::string buff);
+	UTILITIES_LIBRARY_API bool is_null(std::string buff);
 };
